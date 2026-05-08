@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Caculator</title>
+    <link rel="stylesheet" href="css/caculator.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="containner">
+            <div class="main-containner">
+                <div id="top">
+                    <input type="text" placeholder="0" class="input1" id="mainInput" readonly>
+                </div>
+                <div id="bottom">
+                    <div id="first">
+                        <button class="first-one" onclick="allClear()">
+                            <div>AC</div>
+                        </button>
+                        <button class="first-two">
+                            <div class="first-two-parent">
+                                <p>+</p>
+                                <p>/</p>
+                                <p>-</p>
+                            </div>
+                        </button>
+                        <button class="first-three" onclick="sign('%')">
+                            <div>%</div>
+                        </button>
+                        <button class="first-four" onclick="sign('/')" id="+">
+                            <div class="first-four-parent">
+                                <div>.</div>
+                                <div>_</div>
+                                <div>.</div>
+                            </div>
+                        </button>
+                    </div>
+                    <div id="second">
+                        <button class="round" onclick="press('7')">7</button>
+                        <button class="round" onclick="press('8')">8</button>
+                        <button class="round" onclick="press('9')">9</button>
+                        <button class="round-dif" onclick="sign('*')" id="x">x</button>
+                    </div>
+                    <div id="third">
+                        <button class="round" onclick="press('4')">4</button>
+                        <button class="round" onclick="press('5')">5</button>
+                        <button class="round" onclick="press('6')">6</button>
+                        <button class="round-dif2" onclick="sign('-')" id="-">_</button>
+                    </div>
+                    <div id="fourth">
+                        <button class="round" onclick="press('1')">1</button>
+                        <button class="round" onclick="press('2')">2</button>
+                        <button class="round" onclick="press('3')">3</button>
+                        <button class="round-dif3" onclick="sign('+')" id="+">+</button>
+                    </div>
+                    <div id="fifth">
+                        <button class="round-long" onclick="press('0')">0</button>
+                        <button class="round" onclick="sign('.')">.</button>
+                        <button class="round-dif3" id="equalBtn" onclick="calculate()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
