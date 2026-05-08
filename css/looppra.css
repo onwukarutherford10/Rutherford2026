@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.containner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/no-three-ranked-player.jpeg);
+    background-position: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}

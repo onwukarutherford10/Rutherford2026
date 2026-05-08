@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url(../font/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf);
+}
+h2{
+    margin-bottom: 25px;
+}
+p{
+    margin-bottom: 10px;
+}
+button{
+    width: 10%;
+    height: 20px;
+
+}
+.containner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 163, 62);
+}
+.parent{
+    background-color: yellowgreen;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+}
+#output{
+    margin-top: 20px;
+   font-family: "Barlow Semi Condensed";
+}
