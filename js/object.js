@@ -33,6 +33,23 @@ const premierLeague = [ {
 }
 ]
 
+const{clubName, bestPlayer, players: {defenders} } = premierLeague[0]
+console.log(clubName,  bestPlayer, defenders[0]);
+
+
+let swapNums = [5 , 10];
+let [a,b] = swapNums;
+[a,b] = [b,a]
+console.log(a,b)
+
+let objectSwap = {
+    aa: 30,
+    bb: 40
+}
+let { aa , bb} = objectSwap;
+[aa,bb] = [bb,aa]
+console.log(aa,bb)
+
 function firstTeam(){
     return premierLeague[0]['clubName']
 }

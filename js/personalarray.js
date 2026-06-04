@@ -54,8 +54,6 @@ studentobject.sort((a,b) => a.name.localeCompare(b.name));
 const topTwoStudentObject = studentobject.slice(0,2)
 console.log(topTwoStudentObject);
 
-// FOR INCLUDES
-
 const fruit = ['apple', 'banana', 'mango']
 if(fruit.includes('banana')){
     console.log(1 + ': ' + 'yes')

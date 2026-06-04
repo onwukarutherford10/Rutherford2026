@@ -1608,7 +1608,80 @@ const companyData = {
   ],
 };
 
-module.exports = companyData;
+
+
+function filterActiveState(){
+  return companyData.employees.filter((emp)=>emp.job.isActive);
+}
+// console.log(filterActiveState())
+
+function fullName(){
+  return companyData.employees.map(
+    (emp) => emp.personal.firstName + ' ' + emp.personal.lastName
+  );
+}
+console.log(fullName())
+let sum = 0;
+function salary(){
+  for(let i=0; i<companyData.employees.length; i++){
+    sum+= companyData.employees[i].job.salary
+  }
+  return sum
+}
+// console.log(salary())
+
+function highestSalary(){
+  let highest = companyData.employees[0].job.salary;
+  for(i=0; i<companyData.employees.length; i++){
+    if(companyData.employees[i].job.salary > highest){
+       highest = companyData.employees[i].job.salary
+  }
+}
+  return highest
+}
+// console.log(highestSalary())
+
+function section(part){
+  let list = [];
+  for(i=0; i<companyData.employees.length; i++){
+    if(companyData.employees[i].job.department == part){
+      list.push(companyData.employees[i])
+    }
+  }
+  return list
+}
+// console.log(section('IT'))
+
+// function grouping(){
+//   let group = {}
+//   for(let i=0; i<companyData.employees.length; i++){
+//     const employees = companyData.employees[i];
+//     const department = employees.department;
+//     if(!group[department]){
+//       group[department] = [];
+//     }
+//     group[department].push(employees)
+//   }
+//   return group
+// }
+// console.log(grouping())
+
+
+function grouping(){
+  return companyData.employees.reduce((acc, employee) => {
+    if(!acc[employee.job.department]){
+      acc[employee.job.department] = []
+    }
+    acc[employee.job.department].push(employee.personal)
+    return acc
+  }, {})
+}
+console.log(grouping())
+
+
+
+
+
 
 
 /* An atm has 100, 20, 9, and 1 Naira bills (NGN) available to be dispensed.  
@@ -1631,42 +1704,42 @@ module.exports = companyData;
 // 130                [1,1,1,1]
 
 
-function atm(amount){
-  let hundred;
-  let tweenty;
-  let nine;
-  let one;
-  let remainder;
-  let newarr = [];
-  if(amount <= 10000){
-    hundred = Math.floor(amount / 100);
-    remainder1 = amount % 100;
-    tweenty = Math.floor(remainder1 / 20);
-    remainder2 = remainder1 % 20;
-    nine = Math.floor(remainder2 / 9);
-    remainder3 = remainder2 % 9;
-    one = Math.floor(remainder3 / 1);
-    newarr.unshift(tweenty);
-    newarr.unshift(hundred);
-    newarr.push(nine);
-    newarr.push(one);
-  }
-  return newarr
-}
-console.log(atm(3456))
+// function atm(amount){
+//   let hundred;
+//   let tweenty;
+//   let nine;
+//   let one;
+//   let remainder;
+//   let newarr = [];
+//   if(amount <= 10000){
+//     hundred = Math.floor(amount / 100);
+//     remainder1 = amount % 100;
+//     tweenty = Math.floor(remainder1 / 20);
+//     remainder2 = remainder1 % 20;
+//     nine = Math.floor(remainder2 / 9);
+//     remainder3 = remainder2 % 9;
+//     one = Math.floor(remainder3 / 1);
+//     newarr.unshift(tweenty);
+//     newarr.unshift(hundred);
+//     newarr.push(nine);
+//     newarr.push(one);
+//   }
+//   return newarr
+// }
+// console.log(atm(3456))
 
 
-function convertSecondsToHourMinSec(seconds){
-  let result = [];
-  let hours = Math.floor(seconds / 3600);
-  let remainder1 = seconds % 3600;
-  let minute = Math.floor(remainder1 / 60);
-  let remainder2 = remainder1 % 60;
-  let sec = Math.floor(remainder2 / 1);
-  result.unshift(minute);
-  result.unshift(hours);
-  result.push(sec);
+// function convertSecondsToHourMinSec(seconds){
+//   let result = [];
+//   let hours = Math.floor(seconds / 3600);
+//   let remainder1 = seconds % 3600;
+//   let minute = Math.floor(remainder1 / 60);
+//   let remainder2 = remainder1 % 60;
+//   let sec = Math.floor(remainder2 / 1);
+//   result.unshift(minute);
+//   result.unshift(hours);
+//   result.push(sec);
 
-  return result = [hours + ' hour', minute + ' minute', + sec + ' seconds'];
-}
-console.log(convertSecondsToHourMinSec(257777))
+//   return result = [hours + ' hour', minute + ' minute', + sec + ' seconds'];
+// }
+// console.log(convertSecondsToHourMinSec(257777))

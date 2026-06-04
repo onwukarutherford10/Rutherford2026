@@ -89,6 +89,6 @@ function comboString(a,b){
 function nonStart(a,b){
     let firstA = a.shift()
     let firstB = b.shift
-    return firstA+firstB
+    return firstA + firstB
 }
 console.log(nonStart('shotl', 'java'))

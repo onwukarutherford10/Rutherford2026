@@ -1,8 +1,5 @@
 const prices = [300,400,100,600,800]
 
-const{} = prices
-
-// console.log(`Rice : ${a}, Beans : ${b}`)
 
 const fruits = ['Mango', 'Apple', 'Pears', 'Lemon']
 

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="css/keyboard.css">
 </head>
 <body>
-    <div class="containner">    
+    <div class="containner">
+              <input type="text" id="display" readonly>    
               <div class="top">
                  <div class="keyboard">
                      <div class="small">
@@ -103,7 +104,7 @@
                      </div>
                      <div class="normal">
                         <button class="normal-div2">tab</button>
-                        <button class="normal-div-caps">Q</button>
+                        <button class="normal-div-caps" onclick="type('q')">Q</button>
                         <button class="normal-div-caps">W</button>
                         <button class="normal-div-caps">E</button>
                         <button class="normal-div-caps">R</button>
@@ -205,5 +206,6 @@
                  </div>
               </div>             
     </div>
+    <script src="js/keyboard.js"></script>
 </body>
 </html>
